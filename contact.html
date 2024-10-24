@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="initial-scale=1.0" name="viewport">
+        <title>Miguloza | Contact</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="icon" type="image/png" href="images/icons/favicon-miguloza.png">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
+          </style>
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <!-- NAVIGATION BAR -->
+        <nav>
+            <div class="nav-left">
+                <a href="index.html"><img src="images/logo/logo-dark-miguloza.png" class="nav-logo" alt="Miguloza Designs logo"></a>
+            </div>
+            <div class="nav-right" id="navRight">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="hamburger-icon" id="hamburgerIcon">&#9776;</div>
+        </nav>
+
+        <!-- MAIN -->
+        <main>
+            <!-- HERO SECTION -->
+            <div class="hero-section" id="hero">
+                <div class="hero-left">
+                    <h1>Contact <span style="color: #FFF">Me</span></h1>
+                </div>
+                <div class="hero-right"></div>
+            </div>
+
+            <!-- CONTACT SECTION -->
+            <div class="container" id="contact">
+                <div class="center">
+                    <p>Fill out the form below to get started on your website (or other project) with me. You can also send me an <strong><a href="mailto:miguel@miguloza.com">email</a></strong> if you wish.</p>
+                </div>
+                <div class="center">
+                    <form action="contact-form.php" method="POST"> <!-- used to send email to me -->
+                        <fieldset>
+                            <label for="name">Your name</label>
+                                <input id="name" name="Name" type="text" placeholder="name" required>
+                            <label for="email">Your email</label> 
+                                <input id="email" name="Email" type="email" placeholder="you@email.com" required>
+                            <label for="message">Your message</label>
+                                <textarea id="message" name="Message" rows="10" cols="40" placeholder="message here..." required></textarea>
+                        </fieldset>
+                        <input id="submit" name="submit" type="submit" value="SEND">
+                    </form>
+                </div>
+                <div class="spacer"></div>
+            </div>
+        </main>
+
+        <!-- FOOTER SECTION -->
+        <footer class="center">
+            <ul class="socials">
+                <li>
+                    <a href="https://www.linkedin.com/in/miguloza/" target="_blank">
+                        <img src="images/icons/linkedin-icon.png" alt="LinkedIn icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/migu-loza" target="_blank">
+                        <img src="images/icons/github-icon.png" alt="GitHub icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:miguel@miguloza.com" target="_blank">
+                        <img src="images/icons/email-icon.png" alt="Email icon">
+                    </a>
+                </li>
+            </ul>
+            <p>&copy; 2024 Miguloza Designs LLC</p>
+        </footer>
+    </body>
+</html>

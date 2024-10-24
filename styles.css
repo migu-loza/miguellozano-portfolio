@@ -1,0 +1,492 @@
+/* *** CSS RESET *** */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* *** ELEMENTS *** */
+body {
+    background-color: #111111;
+    color: #C9C9C9;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 100%;
+}
+
+h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 3.8em;
+    font-kerning: auto;
+    color: #60E163;
+    line-height: 0.95em;
+}
+
+h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 3em;
+    font-kerning: auto;
+    color: #FFF;
+    line-height: 1.5em;
+}
+
+h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.8em;
+    font-kerning: auto;
+    color: #FFF;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 25px 0;
+}
+
+strong {
+    color: #FFF;
+}
+
+a {
+    color: #C9C9C9;
+}
+
+a:hover {
+    color: #60E163;
+}
+
+img {
+   max-width: 100%;
+   margin: 30px 0;
+}
+
+.round-corners {
+    border-radius: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.center {
+    text-align: center;
+    padding: 0 12%;
+}
+
+.spacer {
+    width: 100%;
+    height: 50px;
+}
+
+.button {
+    background-color: #393939;
+    border: 8px solid #393939;
+    border-radius: 5px;
+    color: #FFF;
+    display: block;
+    width: 25%;
+    min-width: 70px;
+    max-width: 100px;
+    margin: 20px auto 10px auto;
+    height: 23px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.button:hover {
+    font-weight: bold;
+    background-color: #60E163;
+    border-color: #60E163;
+    color: #FFF;
+}
+
+@media (max-width: 650px) {
+    .center {
+        text-align: center;
+        padding: 0;
+    }
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    .button {
+        width: 70%;
+        max-width: 170px;
+        height: 25px;
+    }
+}
+
+/* *** NAVIGATION BAR *** */
+nav {
+    background-color: #000;
+    position: fixed;
+    display: flex;
+    justify-content: space-between; /* spaces image (.nav-left) and links (.nav-right) */
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.nav-logo {
+    width: 260px;
+    margin: 5px 15px 5px 0;
+}
+
+.nav-left {
+    margin-left: 12px;
+}
+
+.nav-right {
+    margin-right: 50px;
+    margin-left: auto; /* pushes links to the right side */
+}
+
+.nav-right ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.nav-right ul li {
+    display: inline-block; /* displays links horizontally */
+    margin-left: 15px;
+}
+
+.nav-right ul li a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.nav-right a:hover {
+    color: #60E163;
+}
+
+.nav-open {
+    display: block;
+}
+
+#hamburgerIcon {
+    display: none;
+    color: #FFF;
+    font-size: 36px;
+    margin-right: 50px;
+    padding-bottom: 12px;
+    cursor: pointer;
+}
+
+@media (max-width: 792px) {
+    .nav-right {
+        background-color: #000;
+        display: none;
+        position: absolute; /* used to keep hamburger menu icon in place after clicked on */
+        right: 0;
+        width: 100%;
+        text-align: right; /* this aligns menu items to the right */
+        margin-left: auto; /* this pushes the menu items to the right */
+        margin-top: 265px;
+        margin-right: 0;
+        padding-right: 90px;
+    }
+    .nav-right.show {
+        display: block;
+    }
+    .nav-right ul li {
+        display: block;
+        margin: 18px 0;
+    }
+    #hamburgerIcon {
+        display: block;
+    }
+}
+
+@media (min-width: 793px) {
+    .nav-right {
+        display: flex;
+    }
+    #hamburgerIcon {
+        display: none;
+    }
+}
+
+/* *** HERO SECTION *** */
+.hero-section {
+    width: 80%;
+    height: 100vh; /* 100vh = screen height */
+    margin: 0 auto;
+    display: flex; /* display and flex-direction makes container divide in two */
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-left,
+.hero-right {
+    width: 48%;
+    padding: 10px;
+}
+
+.hero-left p {
+    font-size: 1.4em;
+    max-width: 350px;
+    margin-top: 10px;
+}
+
+.hero-right {
+    text-align: center;
+}
+
+.hero-right img {
+    width: 100%;
+    max-width: 250px;
+    min-width: 200px;
+}
+
+@media (max-width: 800px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-left,
+    .hero-right {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    .hero-left {
+        margin-top: 150px;
+    }
+    .hero-left p {
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+    .hero-right img {
+        width: 100%;
+        max-width: 170px;
+        min-width: 120px;
+        padding-bottom: 20px;
+    }
+}
+
+/* *** CURRENTLY WORKING WITH SECTION *** */
+.agencies img {
+    padding: 0 30px;
+    max-width: 100px;
+    display: flex; /* centers items vertically */
+    flex-direction: column;
+    align-items: center;
+}
+
+/* *** SERVICES SECTION *** */
+.icons-services {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.icons-services li {
+    padding: 0 50px;
+    margin: 15px;
+    width: 30%;
+    max-width: 170px;
+    min-width: 140px;
+    text-align: center;
+}
+
+.icons-services p {
+    margin: 0 -50px;
+}
+
+.icons-services img {
+    width: 70%;
+}
+
+/* *** PROCESS SECTION *** */
+.process-list {
+    background-color: #eeeeee;
+    color: #111111;
+    border-radius: 30px;
+    padding: 55px 40px 20px 40px;
+    margin: 30px;
+}
+
+.process-list p {
+    margin-top: -20px;
+}
+
+/* *** ABOUT SECTION *** */
+.ml-pic {
+    width: 100%;
+    max-width: 270px;
+    min-width: 200px;
+}
+
+.icons {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.icons li {
+    padding: 0 30px;
+    max-width: 80px;
+    display: flex; /* centers items vertically */
+    flex-direction: column;
+    align-items: center;
+    height: 200px; /* use this for Safari image issue - it was being displayed as a vertically stretched image */
+}
+
+.icons li p {
+    margin: 0; 
+    text-align: center;
+}
+
+.icons li img { /* use this for Safari image issue - it was being displayed as a vertically stretched image */
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+.exed-list {
+    padding: 0px 30px;
+    margin: 30px;
+}
+
+.exed-list p {
+    margin: 0;
+}
+
+.exed-title {
+    font-size: 1.35em;
+}
+
+/* *** PROJECTS SECTION *** */
+.project-gallery {
+    background-color: #000;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.project-gallery img {
+    height: 270px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 3px solid #000;
+}
+
+.project-gallery::after {
+    content: "";
+    width: 350px;
+}
+
+.smaller {
+    max-height: 130px;
+    object-fit: contain;
+}
+
+/* *** CONTACT SECTION *** */
+form {
+    width: 80%;
+    min-width: 270px;
+    max-width: 575px;
+    margin: 0 auto;
+}  
+
+fieldset {
+    border: none;
+} 
+
+label {
+    display: block;
+    margin-top: 30px;
+    text-align: left;
+} 
+
+input, textarea, select {
+    width: 95%;
+    margin: 8px 0 0 0;
+    min-height: 25px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 16px;
+    border-radius: 4px;
+} 
+
+input, textarea {
+    background-color: #393939;
+    border: 8px solid #393939;
+    color: #FFF;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 25%;
+    min-width: 70px;
+    max-width: 100px;
+    margin: 20px auto 10px auto;
+    height: 40px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 14px;
+    background-color: #393939;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    font-weight: bold;
+    background-color: #60E163;
+    border-color: #60E163;
+}
+
+@media (max-width: 650px) {
+    input[type="submit"] {
+        width: 70%;
+        max-width: 170px;
+        height: 50px;
+    }
+}
+
+/* *** FOOTER SECTION *** */
+footer {
+    background-color: #000;
+    padding: 30px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+footer p {
+    margin-bottom: 0px; /* required to remove blank space below footer */
+    padding-bottom: 20px;
+}
+
+.socials {
+    list-style-type: none;
+    padding: 0;
+}
+
+.socials li {
+    display: inline-block; /* displays icons horizontally */
+}
+
+.socials img {
+    width: 45px;
+}
+
+.socials a {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.socials a:link {
+    text-decoration: none;
+}
